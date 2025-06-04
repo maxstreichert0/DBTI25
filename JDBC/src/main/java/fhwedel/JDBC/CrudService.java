@@ -27,7 +27,7 @@ public class CrudService {
 
     // Neuen Eintrag hinzufügen
     private static void insertPersonal(Connection conn) throws SQLException {
-        String sql = "INSERT INTO personal (PNR, Name, Vorname, Geh_Stufe, Abt_Nr, Krankenkasse) VALUES (417, 'Krause', 'Henrik', 'it1', 'd13', 'tkk')";
+        String sql = "INSERT INTO personal (PNR, Name, Vorname, geh_stufe, Abt_Nr, Krankenkasse) VALUES (417, 'Krause', 'Henrik', 'it1', 'd13', 'tkk')";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.executeUpdate();
             System.out.println("Neuer Eintrag erfolgreich hinzugefügt!");
